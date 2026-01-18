@@ -1,0 +1,23 @@
+{
+	"servers": {
+		"svelte": {
+			"url": "https://mcp.svelte.dev/mcp"
+		},
+		"filesystem": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/nullntf/Documents/GMSvelte"]
+		},
+		"git": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-git"]
+		},
+		"mysql": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-mysql"]
+		},
+		"Railway": {
+			"command": "npx",
+			"args": ["-y", "@railway/mcp-server"]
+		}
+	}
+}
