@@ -86,7 +86,7 @@
 							{$page.data.user.name} ({$page.data.user.role})
 						</span>
 						<button
-							on:click={logout}
+							onclick={logout}
 							class="bg-red-600 text-white px-3 py-1 rounded text-sm hover:bg-red-700 transition-colors"
 						>
 							Cerrar Sesión
