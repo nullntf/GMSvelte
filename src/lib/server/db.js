@@ -10,10 +10,11 @@ let pool = null;
 export function getPool() {
 	if (!pool) {
 		pool = mysql.createPool({
-			host: process.env.MYSQL_HOST || 'localhost',
-			user: process.env.MYSQL_USER || 'root',
-			password: process.env.MYSQL_PASSWORD || '',
-			database: process.env.MYSQL_DATABASE || 'gmsveltedb',
+			host: '127.0.0.1', // Usar IP explícita para evitar socket issues
+			port: 3306, // Puerto TCP explícito
+			user: 'root',
+			password: '5378',
+			database: 'gmsveltedb',
 			connectionLimit: 10,
 			queueLimit: 0,
 			multipleStatements: true // Permitir múltiples statements

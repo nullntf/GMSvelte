@@ -15,6 +15,11 @@
 		}
 	});
 
+	async function handleSubmit(event: Event) {
+		event.preventDefault();
+		await login();
+	}
+
 	async function login() {
 		loading = true;
 		error = '';
@@ -51,7 +56,7 @@
 			<p class="text-gray-600">Sistema de Gestión Multitienda</p>
 		</div>
 
-		<form on:submit|preventDefault={login} class="space-y-6">
+		<form onsubmit={handleSubmit} class="space-y-6">
 			{#if error}
 				<div class="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-md text-sm">
 					{error}
